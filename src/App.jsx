@@ -617,6 +617,44 @@ export default function App() {
               NEXT-GEN AI & DEFI LIQUIDITY INFRASTRUCTURE
             </div>
 
+{/* Animated 3D-Style Floating AURA Coin & Blockchain Orbit */}
+<div className="flex items-center gap-5 mb-4">
+  <div className="relative w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center shrink-0">
+    {/* Ambient Glow di Belakang Koin */}
+    <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-cyan-500/30 to-indigo-500/30 blur-xl animate-pulse" />
+
+    {/* Garis Orbit Blockchain Luar (Berputar Searah Jarum Jam + Node Titik) */}
+    <div className="absolute inset-0 rounded-full border border-dashed border-cyan-400/45 animate-orbit-cw">
+      <span className="absolute -top-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]" />
+      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-indigo-400 shadow-[0_0_8px_#818cf8]" />
+    </div>
+
+    {/* Garis Orbit Blockchain Dalam (Berputar Berlawanan Arah + Node Titik) */}
+    <div className="absolute inset-2.5 rounded-full border border-indigo-400/35 animate-orbit-ccw">
+      <span className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+    </div>
+
+    {/* Logo Koin AURA Melayang Naik-Turun */}
+    <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-br from-cyan-400/50 via-slate-900 to-indigo-500/50 shadow-[0_0_25px_rgba(34,211,238,0.35)] animate-float-coin">
+      <img
+        src="/aura-logo.png"
+        alt="AURA Coin Animated"
+        className="w-full h-full rounded-full object-cover"
+      />
+    </div>
+  </div>
+
+  {/* Badge Status Live Chain di Sebelah Koin */}
+  <div className="space-y-1.5">
+    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300 text-xs font-semibold">
+      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+      <span>BSC Mainnet Node Active</span>
+    </div>
+    <p className="text-xs text-slate-400 max-w-xs">
+      Autonomous Smart-Contract Liquidity & Real-Time On-Chain Distribution
+    </p>
+  </div>
+</div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
               Empowering Autonomous{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
