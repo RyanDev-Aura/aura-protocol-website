@@ -37,7 +37,7 @@ const SELECTORS = {
   // Write Functions
   buyWithBNB: "0x20f1fc61",         // buyWithBNB() -> Verified from BscScan Input Data!
   approve: "0x095ea7b3",            // approve(address,uint256)
-  buyWithUSDT: "0x706c5957",        // buyWithUSDT(uint256)
+  buyWithUSDT: "0xa7c60160",        // buyWithUSDT(uint256)
   claimTokens: "0x48c54b9d",        // claimTokens()
   // Read Functions (eth_call)
   balanceOf: "0x70a08231",          // balanceOf(address)
