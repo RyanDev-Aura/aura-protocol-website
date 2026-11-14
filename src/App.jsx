@@ -1218,32 +1218,93 @@ useEffect(() => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white">AURA PROTOCOL ($AUR)</span>
-            <span>• Built on BNB Smart Chain Mainnet</span>
-          </div>
-          <div className="flex items-center gap-6">
-            <a
-              href={`https://bscscan.com/token/${TOKEN_ADDRESS}`}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-cyan-400 transition"
-            >
-              Token Contract
-            </a>
-            <a
-              href={`https://bscscan.com/address/${PRESALE_ADDRESS}`}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-cyan-400 transition"
-            >
-              Presale Contract
-            </a>
-          </div>
-        </div>
-      </footer>
+<footer className="border-t border-slate-800/80 bg-slate-950 py-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+    
+    {/* Sisi Kiri: Nama Protokol & Jaringan */}
+    <div className="flex items-center gap-2 text-center sm:text-left">
+      <span className="font-extrabold text-white">AURA PROTOCOL ($AUR)</span>
+      <span>• Built on BNB Smart Chain Mainnet</span>
     </div>
-  );
-}
+
+    {/* Bagian Tengah: Ikon Sosial Media & Tombol Whitepaper */}
+    <div className="flex items-center flex-wrap justify-center gap-3">
+      {/* Telegram */}
+      <a
+        href="https://t.me/auraprotocol"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
+        title="Telegram Community"
+      >
+        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.622-.168.9-.5 1.201-.82 1.23-.697.064-1.228-.46-1.903-.903-1.07-.702-1.677-1.139-2.716-1.823-1.203-.795-.423-1.231.262-1.944.179-.185 3.28-3.004 3.342-3.257.008-.033.015-.15-.058-.212-.073-.062-.18-.041-.258-.024-.11.025-1.859 1.183-5.242 3.475-.496.341-.944.507-1.344.498-.442-.011-1.29-.249-1.921-.454-.775-.245-1.391-.375-1.339-.792.028-.222.333-.448.918-.682 3.597-1.562 5.998-2.585 7.202-3.07 3.428-1.387 4.143-1.628 4.608-1.636.102-.002.331.024.479.143.124.1.159.234.173.328.017.094.034.312.018.482z"/>
+        </svg>
+        <span className="hidden sm:inline">Telegram</span>
+      </a>
+
+      {/* Twitter / X */}
+      <a
+        href="https://twitter.com/auraprotocol"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
+        title="Twitter / X"
+      >
+        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <span className="hidden sm:inline">Twitter</span>
+      </a>
+
+      {/* Discord */}
+      <a
+        href="https://discord.gg/auraprotocol"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
+        title="Discord Server"
+      >
+        <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+        </svg>
+        <span className="hidden sm:inline">Discord</span>
+      </a>
+
+      {/* Tombol Whitepaper PDF */}
+      <a
+        href="/AURA-Protocol-Whitepaper.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 transition flex items-center gap-1.5 font-semibold"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <span>Whitepaper</span>
+      </a>
+    </div>
+
+    {/* Sisi Kanan: Tautan Kontrak */}
+    <div className="flex items-center gap-3">
+      <a
+        href={`https://bscscan.com/token/${TOKEN_ADDRESS}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-cyan-400 transition"
+      >
+        Token Contract
+      </a>
+      <span>•</span>
+      <a
+        href={`https://bscscan.com/address/${PRESALE_ADDRESS}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-cyan-400 transition"
+      >
+        Presale Contract
+      </a>
+    </div>
+
+  </div>
+</footer>
