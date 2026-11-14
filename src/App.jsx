@@ -1245,7 +1245,7 @@ useEffect(() => {
 
       {/* Twitter / X */}
       <a
-        href="https://twitter.com](https://twitter.com"
+        href="https://twitter.com"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
@@ -1259,7 +1259,7 @@ useEffect(() => {
 
       {/* Discord */}
       <a
-        href="https://discord.com](https://discord.com"
+        href="https://discord.com"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
