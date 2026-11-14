@@ -1273,7 +1273,7 @@ useEffect(() => {
 
       {/* Tombol Whitepaper PDF */}
       <a
-        href="/AURA-Protocol-Whitepaper.pdf"
+        href="/AURA-Protocol-Official-Whitepaper.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-300 transition flex items-center gap-1.5 font-semibold"
