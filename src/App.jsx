@@ -541,6 +541,38 @@ export default function App() {
 
   const stageTargetTokens = 15000000;
   const stageProgressPercent = Math.min(100, Math.max(4, (tokensSold / stageTargetTokens) * 100));
+  // Target waktu berakhirnya Stage 1: 30 hari (1 bulan) dari 14 November 2026 -> 14 Desember 2026
+const STAGE1_END_TIMESTAMP = new Date('2026-12-14T23:59:59Z').getTime();
+
+const [timeLeft, setTimeLeft] = useState({
+  days: '30',
+  hours: '00',
+  minutes: '00',
+  seconds: '00',
+});
+
+useEffect(() => {
+  const updateCountdown = () => {
+    const now = Date.now();
+    const diff = Math.max(0, STAGE1_END_TIMESTAMP - now);
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    setTimeLeft({
+      days: String(days).padStart(2, '0'),
+      hours: String(hours).padStart(2, '0'),
+      minutes: String(minutes).padStart(2, '0'),
+      seconds: String(seconds).padStart(2, '0'),
+    });
+  };
+
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
@@ -801,6 +833,47 @@ export default function App() {
                 </div>
               </div>
 
+{/* Stage 1 Countdown Timer (30 Days) */}
+      <div className="pt-3 border-t border-slate-800/80 space-y-2">
+        <div className="flex items-center justify-between text-[11px] uppercase tracking-wider text-slate-400">
+          <span>Stage 1 Ends In</span>
+          <span className="text-cyan-400 font-semibold">30-Day Seed Round</span>
+        </div>
+        <div className="grid grid-cols-4 gap-2 text-center">
+          {[
+            { label: 'Days', value: timeLeft.days },
+            { label: 'Hours', value: timeLeft.hours },
+            { label: 'Mins', value: timeLeft.minutes },
+            { label: 'Secs', value: timeLeft.seconds },
+          ].map((unit, idx) => (
+            <div
+              key={idx}
+              className="py-2 px-1 rounded-xl bg-slate-950/90 border border-slate-800/90"
+            >
+              <div className="text-base sm:text-lg font-extrabold text-white font-mono">
+                {unit.value}
+              </div>
+              <div className="text-[10px] uppercase tracking-wider text-slate-400">
+                {unit.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Softcap & Hardcap Info */}
+      <div className="grid grid-cols-2 gap-2.5 pt-1">
+        <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90">
+          <div className="text-[11px] text-slate-400">Softcap Target</div>
+          <div className="text-sm font-bold text-emerald-400 mt-0.5">$60,000 USD</div>
+          <div className="text-[11px] text-slate-500">≈ 95.32 BNB</div>
+        </div>
+        <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90">
+          <div className="text-[11px] text-slate-400">Hardcap Target</div>
+          <div className="text-sm font-bold text-cyan-400 mt-0.5">$150,000 USD</div>
+          <div className="text-[11px] text-slate-500">≈ 238.30 BNB</div>
+        </div>
+      </div>
               {/* Payment Method Switcher */}
               <div className="grid grid-cols-2 gap-3">
                 <button
