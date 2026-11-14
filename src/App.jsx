@@ -1231,7 +1231,7 @@ useEffect(() => {
     <div className="flex items-center flex-wrap justify-center gap-3">
       {/* Telegram */}
       <a
-        href="https://t.me/auraprotocol"
+        href="https://t.me/AuraProtocolcommunity"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition flex items-center gap-1.5"
