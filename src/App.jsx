@@ -1301,10 +1301,12 @@ useEffect(() => {
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-cyan-400 transition"
-      >
-        Presale Contract
-      </a>
+            >
+              Presale Contract
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-  </div>
-</footer>
+  );
+}
